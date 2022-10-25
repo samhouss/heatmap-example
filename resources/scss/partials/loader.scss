@@ -1,0 +1,23 @@
+.loader-wrapper {
+    position: fixed !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgb(128, 128, 128, .6) !important;
+    pointer-events: auto !important;
+
+    .loader-content__wrapper {
+        position: relative !important;
+        height: 100% !important;
+
+        .loader-content {
+            background: transparent !important;
+            opacity: 1 !important;
+            margin: 0 !important;
+            position: absolute !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            padding: 30px !important;
+        }
+    }
+}
