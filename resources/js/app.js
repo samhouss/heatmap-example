@@ -8,7 +8,7 @@ try {
 } catch (e) {
 }
 
-listener = false;
+listener = true;
 
 if (!listener) {
     require('./configurator');

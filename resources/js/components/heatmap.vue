@@ -43,6 +43,9 @@ export default {
             return new Promise((resolve) => setTimeout(resolve, milliseconds));
         },
         async generatePoints() {
+            if (!localStorage.hasOwnProperty('clicks'))
+                return;
+
             console.log('generate heatmap');
 
             this.$root.$emit('showLoader', true); // show the loader on the page
