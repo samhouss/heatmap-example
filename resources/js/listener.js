@@ -12,13 +12,34 @@ export default class clickListener {
         document.addEventListener("click", this.singleClick);
     }
 
+    recursiveFN(node, withID = true) {
+        let id = node.id ? '#' + node.id : '';
+
+        if (!withID) id = '';
+
+        let result = node.tagName.toLowerCase() + ':nth-child(' + ($(node).index() + 1) + ')' + id,
+            pare = $(node).parent()[0];
+
+        if (pare.tagName !== undefined && pare.tagName !== 'BODY') {
+            result = [this.recursiveFN(pare, withID), result].join('>');
+        }
+
+        return result;
+    };
+
+    customDomElementPath(node, withID = true) {
+        let result = this.recursiveFN(node, withID);
+        return 'body>' + result;
+    };
+
     singleClick = async (event) => {
         if (event.target.id === "test") {
             event.preventDefault();
             return;
         }
 
-        let selector_path = domElementPath(event.target);
+        // let selector_path = domElementPath(event.target);
+        let selector_path = this.customDomElementPath(event.target);
 
         let clickData = {
             selector_path: selector_path,
@@ -46,8 +67,6 @@ export default class clickListener {
         array.push(clickData);
 
         localStorage.setItem('clicks', JSON.stringify(array));
-
-        console.log(array);
     };
 }
 

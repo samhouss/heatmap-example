@@ -1,3 +1,56 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @import url(https://fonts.googleapis.com/css2?family=Roboto);
-#s-ux-c{font-family:Roboto,sans-serif!important;font-size:14px!important;height:auto!important;line-height:20px!important;pointer-events:none!important;position:absolute!important;top:0!important;width:100%!important;z-index:200000!important}#s-ux-c h1,#s-ux-c h2,#s-ux-c h3,#s-ux-c h4,#s-ux-c h5,#s-ux-c h6,#s-ux-c li:not(.nav-item),#s-ux-c p,#s-ux-c ul:not(.nav,.nav-tabs){all:initial!important;-moz-box-sizing:border-box!important;box-sizing:border-box!important}#s-ux-c *{-o-transition:none!important;transition:none!important;-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important}#s-ux-c .loader-wrapper{background:hsla(0,0%,50%,.6)!important;height:100%!important;pointer-events:auto!important;position:fixed!important;width:100%!important}#s-ux-c .loader-wrapper .loader-content__wrapper{height:100%!important;position:relative!important}#s-ux-c .loader-wrapper .loader-content__wrapper .loader-content{background:transparent!important;left:50%!important;margin:0!important;opacity:1!important;padding:30px!important;position:absolute!important;top:50%!important;-moz-transform:translate(-50%,-50%)!important;-o-transform:translate(-50%,-50%)!important;transform:translate(-50%,-50%)!important}
+#s-ux-c {
+  font-family: Roboto, sans-serif !important;
+  line-height: 20px !important;
+  font-size: 14px !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: auto !important;
+  pointer-events: none !important;
+  z-index: 200000 !important;
+}
+#s-ux-c h1,
+#s-ux-c h2,
+#s-ux-c h3,
+#s-ux-c h4,
+#s-ux-c h5,
+#s-ux-c h6,
+#s-ux-c ul:not(.nav, .nav-tabs),
+#s-ux-c li:not(.nav-item),
+#s-ux-c p {
+  all: initial !important;
+  -moz-box-sizing: border-box !important;
+       box-sizing: border-box !important;
+}
+#s-ux-c * {
+  -o-transition: none !important;
+  transition: none !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
+}
+#s-ux-c .loader-wrapper {
+  position: fixed !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(128, 128, 128, 0.6) !important;
+  pointer-events: none !important;
+}
+#s-ux-c .loader-wrapper .loader-content__wrapper {
+  position: relative !important;
+  height: 100% !important;
+}
+#s-ux-c .loader-wrapper .loader-content__wrapper .loader-content {
+  background: transparent !important;
+  opacity: 1 !important;
+  margin: 0 !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  -moz-transform: translate(-50%, -50%) !important;
+    -o-transform: translate(-50%, -50%) !important;
+       transform: translate(-50%, -50%) !important;
+  padding: 30px !important;
+}

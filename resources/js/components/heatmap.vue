@@ -31,6 +31,19 @@ export default {
                 this.generatePoints();
             }, 1500);
         });
+
+        let isCtrl = false;
+        document.onkeyup = (e) => {
+            if (e.keyCode == 17) isCtrl = false;
+        }
+
+        document.onkeydown = (e) => {
+            if (e.keyCode == 17) isCtrl = true;
+            if (e.keyCode == 82 && isCtrl == true) {
+                this.generatePoints();
+                return false;
+            }
+        }
     },
     methods: {
         removeElementsByClass(className) {
